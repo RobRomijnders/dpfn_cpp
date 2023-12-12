@@ -25,5 +25,13 @@ Sequences are then scaled by their log likelihood. You may encounter the differe
 For installation, one can use `make build` from the main directory. Prior to any experiment, it is recommended to run the tests with `make test`.
 Some of the unit tests compare this library against the [original library](https://github.com/RobRomijnders/dpfn_aaai).
 
-## Questions and communication
+# Speed test
+
+The image below is a direct screenshot from Weights and Biases, comparing the runtime and memory consumption of two experiments.
+Both experiments run 16 simulations on 100 days with 100k agents on OpenABM in parallel. The blue line, 'hopeful-sweep-8', corresponds to the C++ implementation, the red line, 'eager-sweep-15', corresponds to the Python+NumbaJIT implementation.
+The diagram shows that the C++ implementation is about 2x faster and uses way less memory.
+
+![speed_test](https://github.com/RobRomijnders/dpfn_cpp/blob/main/data/speed_test.jpg?raw=true)
+
+# Questions and communication
 Any correspondence may go to romijndersrob@gmail.com or r.romijnders@uva.nl
